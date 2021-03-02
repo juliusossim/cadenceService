@@ -37,7 +37,7 @@ class SequenceController extends Controller
      */
     public function store(Request $request)
     {
-        return  response()->json(['data'=>$request, 'status'=>200, 'message'=>'success',] );
+        return  response()->json(['data'=>$request->sequence_name, 'status'=>200, 'message'=>'success',] );
     }
 
     /**
