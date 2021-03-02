@@ -32,12 +32,39 @@ class SequenceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
+     * @param sequence $sequence
      * @return JsonResponse
      */
-    public function store(Request $request)
+    public function store(Sequence $sequence)
     {
-        return  response()->json(['data'=>$request->sequence_name, 'status'=>200, 'message'=>'success',] );
+
+//        $table->id();
+//        $table->string('name');
+//        $table->tinyInteger('user_id');
+//        $table->string('prospect');
+//        $table->integer('specified'); /*status_id*/
+//        $table->bigInteger('iteration');
+//        $table->boolean('activated');
+//        $table->boolean('completed');
+//        $table->boolean('replied');
+//        $table->boolean('unsubscribed');
+//        $table->boolean('linear');
+//        $table->boolean('status');  /* 0 -> pe
+
+        $data = [
+            'name'=>$sequence->sequence_name ?? null,
+            'user_id'=>$sequence->owner ?? null,
+            'prospect'=>$sequence->cadidate ?? null,
+            'specified'=>$sequence->sequence_name ?? null,
+            'activated'=>$sequence->activate ?? null,
+            'completed'=>$sequence->complete ?? null,
+            'replied'=>$sequence->replied ?? null,
+            'unsubscribed'=>$sequence->unsubscribed ?? null,
+            'linear'=>$sequence->linear ?? null,
+            'status'=>$sequence->status ?? null,
+
+        ];
+        return  response()->json([$data, 'status'=>200, 'message'=>'success',] );
     }
 
     /**
