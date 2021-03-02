@@ -25,12 +25,12 @@ $app = new Illuminate\Foundation\Application(
 | incoming requests to this application from both the web and CLI.
 |
 */
-
-$env = $app->detectEnvironment(array(
-
-    'local' => array('glamour-ThinkPad-T470-W10DG'),
-
-));
+//
+//$env = $app->detectEnvironment(array(
+//
+//    'local' => array('glamour-ThinkPad-T470-W10DG'),
+//
+//));
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
