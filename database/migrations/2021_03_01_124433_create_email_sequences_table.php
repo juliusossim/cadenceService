@@ -17,8 +17,8 @@ class CreateEmailSequencesTable extends Migration
             $table->id();
             $table->tinyInteger('sequence_id');
             $table->integer('template_id');
-            $table->text('settings')->default('{}')->nullable(false);;
-            $table->text('conditions')->default('{}')->nullable(false);;
+            $table->text('settings')->nullable(false);;
+            $table->text('conditions')->nullable(false);;
             $table->timestamps();
         });
     }

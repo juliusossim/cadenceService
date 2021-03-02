@@ -16,7 +16,7 @@ class CreateProspectLogsTable extends Migration
         Schema::create('prospect_logs', function (Blueprint $table) {
             $table->id();
             $table->tinyInteger('sequence_id');
-            $table->text('prospect')->default('{}')->nullable(false);
+            $table->text('prospect')->nullable(false);
             $table->integer('stage')->default(1);
             $table->integer('circle')->default(0);
             $table->boolean('replied');
