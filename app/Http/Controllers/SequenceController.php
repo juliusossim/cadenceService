@@ -37,9 +37,9 @@ class SequenceController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $data = [
-            'name'=>$request->sequence_name ?? null,
+            'name'=>$request->name ?? null,
             'user_id'=>$request->owner ?? null,
             'prospect'=>$request->cadidate ?? null,
             'specified'=>$request->sequence_name ?? null,
@@ -51,7 +51,7 @@ class SequenceController extends Controller
             'status'=>$request->status ?? null,
 
         ];
-        return  response()->json([$data, 'status'=>200, 'message'=>'success',] );
+        return  response()->json(['data'=>$request, 'status'=>200, 'message'=>'success',] );
     }
 
     /**
