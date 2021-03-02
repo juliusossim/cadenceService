@@ -17,15 +17,15 @@ class CreateSequencesTable extends Migration
             $table->id();
             $table->string('name');
             $table->tinyInteger('user_id');
-            $table->string('prospect');
-            $table->integer('specified'); /*status_id*/
-            $table->bigInteger('iteration');
-            $table->boolean('activated');
-            $table->boolean('completed');
-            $table->boolean('replied');
-            $table->boolean('unsubscribed');
-            $table->boolean('linear');
-            $table->boolean('status');  /* 0 -> pending, 1 -> active, 2 -> stopped, 3 -> completed*/
+            $table->string('prospect')->nullable();
+            $table->integer('specified')->nullable(); /*status_id*/
+            $table->bigInteger('iteration')->default(0);
+            $table->boolean('activated')->default(false);
+            $table->boolean('completed')->default(true);
+            $table->boolean('replied')->default(true);
+            $table->boolean('unsubscribed')->default(true);
+            $table->boolean('linear')->default(true);
+            $table->integer('status')->default(0);  /* 0 -> pending, 1 -> active, 2 -> stopped, 3 -> completed*/
             $table->timestamps();
         });
     }
