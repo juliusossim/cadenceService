@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class sequence extends Model
+class Sequence extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -27,7 +27,7 @@ class sequence extends Model
 //        return $this->belongsTo('App\Models\user');
 //    }
      public function emailSequence() {
-        return $this->hasMany('App\Models\emailSequence');
+        return $this->hasMany('App\Models\EmailSequence');
     }
 
     public function taskSequence() {

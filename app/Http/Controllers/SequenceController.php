@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\sequence;
+use App\Models\Sequence;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -51,17 +51,17 @@ class SequenceController extends Controller
 //            'status'=>$request->status ?? null,
 //
 //        ];
-        sequence::create($request->all());
+        Sequence::create($request->all());
         return  response()->json(['data'=>$request->data, 'status'=>200, 'message'=>'success',] );
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\sequence  $sequence
+     * @param  \App\Models\Sequence  $sequence
      * @return Response
      */
-    public function show(sequence $sequence)
+    public function show(Sequence $sequence)
     {
         //
     }
@@ -69,10 +69,10 @@ class SequenceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\sequence  $sequence
+     * @param  \App\Models\Sequence  $sequence
      * @return Response
      */
-    public function edit(sequence $sequence)
+    public function edit(Sequence $sequence)
     {
         //
     }
@@ -81,10 +81,10 @@ class SequenceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\sequence  $sequence
+     * @param  \App\Models\Sequence  $sequence
      * @return Response
      */
-    public function update(Request $request, sequence $sequence)
+    public function update(Request $request, Sequence $sequence)
     {
         //
     }
@@ -92,10 +92,10 @@ class SequenceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\sequence  $sequence
+     * @param  \App\Models\Sequence  $sequence
      * @return Response
      */
-    public function destroy(sequence $sequence)
+    public function destroy(Sequence $sequence)
     {
         //
     }

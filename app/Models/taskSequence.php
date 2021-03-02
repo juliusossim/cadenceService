@@ -20,6 +20,6 @@ class taskSequence extends Model
     ];
 
     public function sequence() {
-        return $this->belongsTo('App\Models\sequence');
+        return $this->belongsTo('App\Models\Sequence');
     }
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class emailSequence extends Model
+class EmailSequence extends Model
 {
     use HasFactory;
     /**
@@ -25,7 +25,7 @@ class emailSequence extends Model
     ];
 
     public function sequence() {
-        return $this->belongsTo('App\Models\sequence');
+        return $this->belongsTo('App\Models\Sequence');
     }
 
 }

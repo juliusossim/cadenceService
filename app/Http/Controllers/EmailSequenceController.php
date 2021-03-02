@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\emailSequence;
+use App\Models\EmailSequence;
 use Illuminate\Http\Request;
 
 class EmailSequenceController extends Controller
@@ -41,10 +41,10 @@ class EmailSequenceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\emailSequence  $emailSequence
+     * @param  \App\Models\EmailSequence  $emailSequence
      * @return \Illuminate\Http\Response
      */
-    public function show(emailSequence $emailSequence)
+    public function show(EmailSequence $emailSequence)
     {
         //
     }
@@ -52,10 +52,10 @@ class EmailSequenceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\emailSequence  $emailSequence
+     * @param  \App\Models\EmailSequence  $emailSequence
      * @return \Illuminate\Http\Response
      */
-    public function edit(emailSequence $emailSequence)
+    public function edit(EmailSequence $emailSequence)
     {
         //
     }
@@ -64,10 +64,10 @@ class EmailSequenceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\emailSequence  $emailSequence
+     * @param  \App\Models\EmailSequence  $emailSequence
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, emailSequence $emailSequence)
+    public function update(Request $request, EmailSequence $emailSequence)
     {
         //
     }
@@ -75,10 +75,10 @@ class EmailSequenceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\emailSequence  $emailSequence
+     * @param  \App\Models\EmailSequence  $emailSequence
      * @return \Illuminate\Http\Response
      */
-    public function destroy(emailSequence $emailSequence)
+    public function destroy(EmailSequence $emailSequence)
     {
         //
     }

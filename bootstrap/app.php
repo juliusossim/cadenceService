@@ -26,6 +26,12 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
+$env = $app->detectEnvironment(array(
+
+    'local' => array('glamour-ThinkPad-T470-W10DG'),
+
+));
+
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
