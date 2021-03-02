@@ -37,7 +37,7 @@ class SequenceController extends Controller
      */
     public function store(Sequence $sequence)
     {
-        dump($sequence);
+
         return  response()->json($sequence, 200);
     }
 
