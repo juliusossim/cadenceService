@@ -15,10 +15,10 @@ class CreateTaskSequencesTable extends Migration
     {
         Schema::create('task_sequences', function (Blueprint $table) {
             $table->id();
-            $table->integer('sequence_id');
+            $table->tinyInteger('sequence_id');
             $table->integer('task_id');
-            $table->json('settings');
-            $table->json('conditions');
+            $table->text('settings')->default('{}')->nullable(false);;
+            $table->text('conditions')->default('{}')->nullable(false);;
             $table->timestamps();
         });
     }

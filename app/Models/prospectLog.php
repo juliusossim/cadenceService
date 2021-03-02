@@ -23,6 +23,10 @@ class prospectLog extends Model
         'unsubscribed',
     ];
 
+    protected $casts = [
+        'prospect' => 'json',
+    ];
+
     public function sequence() {
         return $this->belongsTo('App\Models\sequence');
     }

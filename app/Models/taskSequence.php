@@ -14,6 +14,11 @@ class taskSequence extends Model
         'settings',
     ];
 
+    protected $casts = [
+        'settings' => 'json',
+        'conditions' => 'json',
+    ];
+
     public function sequence() {
         return $this->belongsTo('App\Models\sequence');
     }

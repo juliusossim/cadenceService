@@ -16,7 +16,7 @@ class CreateSequencesTable extends Migration
         Schema::create('sequences', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('user_id');
+            $table->tinyInteger('user_id');
             $table->string('prospect');
             $table->integer('specified'); /*status_id*/
             $table->bigInteger('iteration');

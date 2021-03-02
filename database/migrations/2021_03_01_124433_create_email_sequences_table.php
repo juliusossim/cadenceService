@@ -15,10 +15,10 @@ class CreateEmailSequencesTable extends Migration
     {
         Schema::create('email_sequences', function (Blueprint $table) {
             $table->id();
-            $table->integer('sequence_id');
+            $table->tinyInteger('sequence_id');
             $table->integer('template_id');
-            $table->json('settings');
-            $table->json('conditions');
+            $table->text('settings')->default('{}')->nullable(false);;
+            $table->text('conditions')->default('{}')->nullable(false);;
             $table->timestamps();
         });
     }
