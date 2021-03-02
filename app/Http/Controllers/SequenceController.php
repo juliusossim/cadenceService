@@ -32,12 +32,12 @@ class SequenceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param sequence $sequence
+     * @param Request $request
      * @return JsonResponse
      */
-    public function store(Sequence $sequence)
+    public function store(Request $request)
     {
-        return  response()->json(['data'=>$sequence, 'status'=>200, 'message'=>'success',] );
+        return  response()->json(['data'=>$request, 'status'=>200, 'message'=>'success',] );
     }
 
     /**
