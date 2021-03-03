@@ -12,11 +12,11 @@ class SequenceController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return JsonResponse
      */
     public function index()
     {
-        //
+        return  response()->json(['data'=>Sequence::all(), 'status'=>200, 'message'=>'data successfully retrieved'] );
     }
 
     /**
@@ -51,9 +51,8 @@ class SequenceController extends Controller
 //            'status'=>$request->status ?? null,
 //
 //        ];
-       $data = Sequence::create($request->all());
 
-        return  response()->json([$data, 'status'=>200, 'message'=>'success',] );
+        return  response()->json([Sequence::create($request->all()), 'status'=>201, 'message'=>'success',] );
     }
 
     /**
