@@ -37,21 +37,6 @@ class SequenceController extends Controller
      */
     public function store(Request $request)
     {
-
-//        $data = [
-//            'name'=>$request->name ?? null,
-//            'user_id'=>$request->owner ?? null,
-//            'prospect'=>$request->cadidate ?? null,
-//            'specified'=>$request->sequence_name ?? null,
-//            'activated'=>$request->activate ?? null,
-//            'completed'=>$request->complete ?? null,
-//            'replied'=>$request->replied ?? null,
-//            'unsubscribed'=>$request->unsubscribed ?? null,
-//            'linear'=>$request->linear ?? null,
-//            'status'=>$request->status ?? null,
-//
-//        ];
-
         return  response()->json([Sequence::create($request->all()), 'status'=>201, 'message'=>'success',] );
     }
 
