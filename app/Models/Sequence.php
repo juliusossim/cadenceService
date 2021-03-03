@@ -11,8 +11,9 @@ class Sequence extends Model
     protected $fillable = [
         'name',
         'user_id',
-        'candidate',
+        'prospect',
         'specified',
+        'instance',
         'linear',
         'status',
         'activated',
@@ -21,6 +22,10 @@ class Sequence extends Model
         'replied',
         'completed',
         'unsubscribed',
+    ];
+
+    protected $casts = [
+        'specified' => 'json',
     ];
 
 //    public function user() {

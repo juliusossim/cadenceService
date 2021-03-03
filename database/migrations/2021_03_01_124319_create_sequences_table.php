@@ -18,10 +18,11 @@ class CreateSequencesTable extends Migration
             $table->string('name');
             $table->tinyInteger('user_id');
             $table->string('prospect')->nullable();
-            $table->integer('specified')->nullable(); /*status_id*/
+            $table->string('specified')->nullable(); /*what leads or contacts should  be in this cadence*/
             $table->bigInteger('iteration')->default(0);
             $table->boolean('activated')->default(false);
             $table->boolean('completed')->default(true);
+            $table->boolean('duplicate')->default(true);
             $table->boolean('replied')->default(true);
             $table->boolean('unsubscribed')->default(true);
             $table->boolean('linear')->default(true);
