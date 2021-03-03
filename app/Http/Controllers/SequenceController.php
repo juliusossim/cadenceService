@@ -51,8 +51,7 @@ class SequenceController extends Controller
 //            'status'=>$request->status ?? null,
 //
 //        ];
-//       $data = Sequence::create($request->all());
-       $data = $request->all();
+       $data = Sequence::create($request->all());
 
         return  response()->json([$data, 'status'=>200, 'message'=>'success',] );
     }
