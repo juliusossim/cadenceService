@@ -28,7 +28,7 @@ class SequenceController extends Controller
      */
     public function store(Request $request)
     {
-        return  response()->json([Sequence::create($request->all()), 'status'=>201, 'message'=>'success',] );
+        return  response()->json(['data'=>Sequence::create($request->all()), 'status'=>201, 'message'=>'success',] );
     }
 
     /**
@@ -52,7 +52,8 @@ class SequenceController extends Controller
      */
     public function update(Request $request, Sequence $sequence)
     {
-        return  response()->json(['data'=>$sequence->update($request->all()), 'status'=>200, 'message'=>'updated successfully',] );
+        $sequence->update($request->all());
+        return  response()->json(['data'=>$sequence, 'status'=>200, 'message'=>'updated successfully',] );
     }
 
     /**
