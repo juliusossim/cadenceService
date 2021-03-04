@@ -16,7 +16,10 @@ class SequenceController extends Controller
      */
     public function index()
     {
-        $data = Sequence::whereUserId(1)->sotBy('created_at')->get()->except('created_at', 'updated_at', 'user_id');
+        $data = Sequence::whereUserId(1)->sotBy('created_at')->get();
+  foreach ($data as $key =>$value)
+            if ($key === 'created_at' ||$key === 'updated_at' || $key === 'user_id' )
+            unset($key);
         return  response()->json([$data, 'status'=>201, 'message'=>'data successfully retrieved'] );
     }
 
