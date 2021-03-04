@@ -16,7 +16,7 @@ class SequenceController extends Controller
      */
     public function index()
     {
-        $data = Sequence::whereUserId(1)->all();
+        $data = Sequence::whereUserId(1)->get();
   foreach ($data as $key =>$value)
             if ($key === 'created_at' ||$key === 'updated_at' || $key === 'user_id' )
             unset($key);
