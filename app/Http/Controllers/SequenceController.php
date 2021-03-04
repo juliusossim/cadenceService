@@ -16,7 +16,8 @@ class SequenceController extends Controller
      */
     public function index()
     {
-        return  response()->json(['data'=>Sequence::all(), 'status'=>200, 'message'=>'data successfully retrieved'] );
+        $data = Sequence::whereUserId(1)->sotBy('created_at')->get()->except('created_at', 'updated_at', 'user_id');
+        return  response()->json([$data, 'status'=>201, 'message'=>'data successfully retrieved'] );
     }
 
     /**
