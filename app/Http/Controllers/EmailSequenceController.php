@@ -34,7 +34,7 @@ class EmailSequenceController extends Controller
             'andor'=>$request->condition==='and',
         ];
 
-        $settings = Settings::create($settingsData);
+        $settings = Settings::create(array($settingsData));
 //        dd($settings);
         if ($settings){
             $emailData = [
@@ -43,7 +43,7 @@ class EmailSequenceController extends Controller
                 'sequence_id'=>$request->id,
                 'conditions'=>$request->conditions,
             ];
-          $email =  EmailSequence::create($emailData);
+          $email =  EmailSequence::create(array($emailData));
           if ($email)
             return  response()->json(['data'=>[$email, $settings], 'status'=>201, 'message'=>'email cadence successfully initiated',] );
 
