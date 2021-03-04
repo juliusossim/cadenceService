@@ -42,7 +42,7 @@ class EmailSequenceController extends Controller
 //              'conditions'=>$request->conditions,
 //          ));
 //          if ($email)
-            return  response()->json(['data'=>[$email, 'template'=>$request->template_id,
+            return  response()->json(['data'=>[$settings, 'template'=>$request->template_id,
                 'settings'=>$settings->id,
                 'sequence_id'=>$request->id,
                 'conditions'=>$request->conditions], 'status'=>201, 'message'=>'email cadence successfully initiated',] );
