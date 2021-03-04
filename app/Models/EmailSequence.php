@@ -17,6 +17,7 @@ class EmailSequence extends Model
         'template_id',
         'conditions',
         'settings',
+        'sequence_id',
     ];
 
 //    protected $casts = [

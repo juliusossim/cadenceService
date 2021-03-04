@@ -36,7 +36,7 @@ class EmailSequenceController extends Controller
         ));
         if ($settings){
           $email =  EmailSequence::create(array(
-              'template'=>$request->template_id,
+              'template_id'=>$request->template_id,
               'settings'=>$settings->id,
               'sequence_id'=>$request->sequence_id,
               'conditions'=>$request->conditions,
