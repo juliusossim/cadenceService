@@ -16,11 +16,7 @@ class SequenceController extends Controller
      */
     public function index()
     {
-        $data = Sequence::whereUserId(1)->get();
-  foreach ($data as $key =>$value)
-            if ($key === 'created_at' ||$key === 'updated_at' || $key === 'user_id' )
-            unset($key);
-        return  response()->json([$data, 'status'=>201, 'message'=>'data successfully retrieved'] );
+        return  response()->json(['data'=>Sequence::all(), 'status'=>200, 'message'=>'data successfully retrieved'] );
     }
 
     /**
