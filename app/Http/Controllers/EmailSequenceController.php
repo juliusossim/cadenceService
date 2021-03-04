@@ -41,7 +41,7 @@ class EmailSequenceController extends Controller
 //              'sequence_id'=>$request->id,
 //              'conditions'=>$request->conditions,
 //          ));
-          if ($email)
+//          if ($email)
             return  response()->json(['data'=>[$email, 'template'=>$request->template_id,
                 'settings'=>$settings->id,
                 'sequence_id'=>$request->id,
