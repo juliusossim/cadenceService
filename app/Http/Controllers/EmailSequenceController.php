@@ -28,16 +28,23 @@ class EmailSequenceController extends Controller
      */
     public function store(Request $request)
     {
+        $settingsData =[
+            'day'=>$request->day,
+            'time'=>$request->time,
+            'andor'=>$request->condition==='and',
+        ];
 
-        $settings = Settings::create($request->settings);
+        $settings = Settings::create($settingsData);
         dd($settings);
         if ($settings){
             $emailData = [
-                'template'=>$request->template,
+                'template'=>$request->template_id,
                 'settings'=>$settings->id,
-                'sequence_id'=>$request->sequence_id,
+                'sequence_id'=>$request->id,
+                'conditions'=>$request->conditions,
             ];
           $email =  EmailSequence::create($emailData);
+          if ($email)
             return  response()->json(['data'=>[$email, $settings], 'status'=>201, 'message'=>'email cadence successfully initiated',] );
 
         }
