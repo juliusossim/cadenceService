@@ -19,15 +19,6 @@ class SequenceController extends Controller
         return  response()->json(['data'=>Sequence::all(), 'status'=>200, 'message'=>'data successfully retrieved'] );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -43,7 +34,7 @@ class SequenceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Sequence  $sequence
+     * @param Sequence $sequence
      * @return Response
      */
     public function show(Sequence $sequence)
@@ -51,33 +42,22 @@ class SequenceController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Sequence  $sequence
-     * @return Response
-     */
-    public function edit(Sequence $sequence)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Sequence  $sequence
-     * @return Response
+     * @param Request $request
+     * @return JsonResponse
      */
-    public function update(Request $request, Sequence $sequence)
+    public function update(Request $request)
     {
-        //
+        return  response()->json([Sequence::update($request->all()), 'status'=>200, 'message'=>'updated successfully',] );
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Sequence  $sequence
+     * @param Sequence $sequence
      * @return Response
      */
     public function destroy(Sequence $sequence)
