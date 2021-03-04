@@ -47,11 +47,12 @@ class SequenceController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
+     * @param Sequence $sequence
      * @return JsonResponse
      */
-    public function update(Request $request)
+    public function update(Request $request, Sequence $sequence)
     {
-        return  response()->json([Sequence::update($request->all()), 'status'=>200, 'message'=>'updated successfully',] );
+        return  response()->json(['data'=>$sequence->update($request->all()), 'status'=>200, 'message'=>'updated successfully',] );
     }
 
     /**
