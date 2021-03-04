@@ -27,19 +27,19 @@ Route::post('sequence', 'App\Http\Controllers\SequenceController@store');
 Route::patch('sequence/{sequence}', 'App\Http\Controllers\SequenceController@update');
 Route::delete('sequence/{sequence}', 'App\Http\Controllers\SequenceController@delete');
 
-/*emailSequence*/
-Route::get('emailSequence', 'App\Http\Controllers\EmailSequenceController@index');
-Route::get('emailSequence/{emailSequence}', 'App\Http\Controllers\EmailSequenceController@show');
-Route::post('emailSequence', 'App\Http\Controllers\EmailSequenceController@store');
-Route::patch('emailSequence/{emailSequence}', 'App\Http\Controllers\emailSequenceController@update');
-Route::delete('emailSequence/{emailSequence}', 'EmailSequenceController@delete');
+/*emailsequence*/
+Route::get('emailsequence', 'App\Http\Controllers\EmailSequenceController@index');
+Route::get('emailsequence/{emailsequence}', 'App\Http\Controllers\EmailSequenceController@show');
+Route::post('emailsequence', 'App\Http\Controllers\EmailSequenceController@store');
+Route::patch('emailsequence/{emailsequence}', 'App\Http\Controllers\EmailSequenceController@update');
+Route::delete('emailsequence/{emailsequence}', 'EmailSequenceController@delete');
 
-/*taskSequence*/
-Route::get('taskSequence', 'App\Http\Controllers\TaskSequenceController@index');
-Route::get('taskSequence/{taskSequence}', 'App\Http\Controllers\TaskSequenceController@show');
-Route::post('taskSequence', 'App\Http\Controllers\TaskSequenceController@store');
-Route::patch('taskSequence/{taskSequence}', 'App\Http\Controllers\TaskSequenceController@update');
-Route::delete('taskSequence/{taskSequence}', 'App\Http\Controllers\TaskSequenceController@delete');
+/*tasksequence*/
+Route::get('tasksequence', 'App\Http\Controllers\TaskSequenceController@index');
+Route::get('tasksequence/{tasksequence}', 'App\Http\Controllers\TaskSequenceController@show');
+Route::post('tasksequence', 'App\Http\Controllers\TaskSequenceController@store');
+Route::patch('tasksequence/{tasksequence}', 'App\Http\Controllers\TaskSequenceController@update');
+Route::delete('tasksequence/{tasksequence}', 'App\Http\Controllers\TaskSequenceController@delete');
 
 
 /*settings*/
