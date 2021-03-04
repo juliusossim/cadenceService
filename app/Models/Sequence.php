@@ -28,9 +28,9 @@ class Sequence extends Model
         'specified' => 'json',
     ];
 
-//    public function user() {
-//        return $this->belongsTo('App\Models\user');
-//    }
+    public function user() {
+        return $this->belongsTo('App\Models\user');
+    }
      public function emailSequence() {
         return $this->hasMany('App\Models\EmailSequence');
     }

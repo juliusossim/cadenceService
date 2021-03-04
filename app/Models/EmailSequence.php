@@ -27,5 +27,8 @@ class EmailSequence extends Model
     public function sequence() {
         return $this->belongsTo('App\Models\Sequence');
     }
+  public function settings() {
+        return $this->belongsTo('App\Models\Settings');
+    }
 
 }

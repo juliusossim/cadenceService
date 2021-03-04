@@ -35,7 +35,7 @@ class EmailSequenceController extends Controller
         ];
 
         $settings = Settings::create($settingsData);
-        dd($settings);
+//        dd($settings);
         if ($settings){
             $emailData = [
                 'template'=>$request->template_id,
