@@ -40,3 +40,11 @@ Route::get('taskSequence/{taskSequence}', 'App\Http\Controllers\TaskSequenceCont
 Route::post('taskSequence', 'App\Http\Controllers\TaskSequenceController@store');
 Route::patch('taskSequence/{taskSequence}', 'App\Http\Controllers\TaskSequenceController@update');
 Route::delete('taskSequence/{taskSequence}', 'App\Http\Controllers\TaskSequenceController@delete');
+
+
+/*settings*/
+Route::get('settings', 'App\Http\Controllers\SettingsController@index');
+Route::get('settings/{settings}', 'App\Http\Controllers\SettingsController@show');
+Route::post('settings', 'App\Http\Controllers\SettingsController@store');
+Route::patch('settings/{settings}', 'App\Http\Controllers\SettingsController@update');
+Route::delete('settings/{settings}', 'App\Http\Controllers\SettingsController@delete');

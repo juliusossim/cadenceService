@@ -28,7 +28,7 @@ class SequenceController extends Controller
      */
     public function store(Request $request)
     {
-        return  response()->json(['data'=>Sequence::create($request->all()), 'status'=>201, 'message'=>'success',] );
+        return  response()->json(['data'=>Sequence::create($request->all()), 'status'=>201, 'message'=>'cadence successfully initiated',] );
     }
 
     /**
@@ -53,17 +53,20 @@ class SequenceController extends Controller
     public function update(Request $request, Sequence $sequence)
     {
         $sequence->update($request->all());
-        return  response()->json(['data'=>$sequence, 'status'=>200, 'message'=>'updated successfully',] );
+        return  response()->json(['data'=>$sequence, 'status'=>200, 'message'=>'cadence successfully saved',] );
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param Sequence $sequence
-     * @return Response
+     * @return JsonResponse
+     * @throws \Exception
      */
     public function destroy(Sequence $sequence)
     {
-        //
+        $sequence->delete();
+        return  response()->json(['data'=>$sequence, 'status'=>200, 'message'=>'cadence successfully deleted',] );
+
     }
 }
