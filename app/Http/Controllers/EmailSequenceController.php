@@ -35,17 +35,14 @@ class EmailSequenceController extends Controller
             'andor'=>$request->condition==='and',
         ));
         if ($settings){
-//          $email =  EmailSequence::create(array(
-//              'template'=>$request->template_id,
-//              'settings'=>$settings->id,
-//              'sequence_id'=>$request->id,
-//              'conditions'=>$request->conditions,
-//          ));
-//          if ($email)
-            return  response()->json(['data'=>[$settings, 'template'=>$request->template_id,
-                'settings'=>$settings->id,
-                'sequence_id'=>$request->id,
-                'conditions'=>$request->conditions], 'status'=>201, 'message'=>'email cadence successfully initiated',] );
+          $email =  EmailSequence::create(array(
+              'template'=>$request->template_id,
+              'settings'=>$settings->id,
+              'sequence_id'=>$request->id,
+              'conditions'=>$request->conditions,
+          ));
+          if ($email)
+            return  response()->json(['data'=>[$settings, $email]] );
 
         }
         return  response()->json(['data'=>null, 'status'=>404, 'message'=>'email cadence not created',] );
