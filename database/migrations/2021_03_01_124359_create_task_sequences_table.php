@@ -17,8 +17,8 @@ class CreateTaskSequencesTable extends Migration
             $table->id();
             $table->tinyInteger('sequence_id');
             $table->integer('task_id');
-            $table->text('settings')->nullable(false);;
-            $table->text('conditions')->nullable(false);;
+            $table->text('settings_id');;
+            $table->text('conditions')->nullable();
             $table->timestamps();
         });
     }

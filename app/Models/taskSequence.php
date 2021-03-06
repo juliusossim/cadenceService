@@ -11,11 +11,11 @@ class taskSequence extends Model
     protected $fillable = [
         'task_id',
         'conditions',
-        'settings',
+        'settings_id',
+        'sequence_id',
     ];
 
     protected $casts = [
-        'settings' => 'json',
         'conditions' => 'json',
     ];
 

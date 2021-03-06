@@ -16,14 +16,13 @@ class EmailSequence extends Model
     protected $fillable = [
         'template_id',
         'conditions',
-        'settings',
+        'settings_id',
         'sequence_id',
     ];
 
-//    protected $casts = [
-//        'settings' => 'json',
-//        'conditions' => 'json',
-//    ];
+    protected $casts = [
+        'conditions' => 'json',
+    ];
 
     public function sequence() {
         return $this->belongsTo('App\Models\Sequence');
@@ -31,5 +30,8 @@ class EmailSequence extends Model
   public function settings() {
         return $this->belongsTo('App\Models\Settings');
     }
+//    public function template() {
+//        return $this->belongsTo('App\Models\Settings');
+//    }
 
 }
